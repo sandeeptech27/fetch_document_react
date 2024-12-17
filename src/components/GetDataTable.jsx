@@ -20,9 +20,7 @@ const GetDataTable = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`${apiUrl}`, {
-          mode: "cors",
-        }); // Replace with actual API URL
+        const response = await axios.get(`${apiUrl}`); // Replace with actual API URL
         setData(response.data); // Set the fetched data to state
       } catch (error) {
         message.error("Failed to fetch data from API");
